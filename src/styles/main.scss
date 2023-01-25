@@ -1,0 +1,283 @@
+@use 'variaveis';
+@use 'numeros';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Roboto:wght@100;400;700&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    color: variaveis.$main-text;
+}
+
+body{
+    background-color: variaveis.$bg-color;
+}
+
+button{
+    cursor: pointer;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width:744px){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (min-width:1024px){
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+.header{
+    height: 100vh;
+
+    @media (min-width:744px){
+        height: 60vh;
+    }
+
+    @media (min-width:1024px){
+        height: 80vh;
+    }
+
+    &__nav{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (min-width:744px){
+            height: 60px;
+        }
+
+        @media (min-width:1024px){
+            height: 80px;
+        }
+
+        img{
+            height: 30px;
+
+            @media (min-width:744px){
+                height: 40px;
+            }
+
+            @media (min-width:1024px){
+                height: 60px;
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 117px;
+                height: 30px;
+                background-color: variaveis.$bg-main-button;
+                border-radius: 15px;
+                font-size: 1.6rem;
+                color: white;
+                border: 1px solid transparent;
+
+                @media (min-width:744px){
+                    height: 35px;
+                    font-size: 1.8rem;
+                }
+
+                @media (min-width:1024px){
+                    height: 41px;
+                    width: 139px;
+                    font-size: 2.4rem;
+                    width: 143px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+
+    &__content{
+        text-align: center;
+
+        @media (min-width:744px){
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            text-align: left;
+            margin-top: 64px;
+            align-items: center;
+        }
+
+        @media (min-width:1024px){
+            margin-top: 95px;
+        }
+
+        img{
+            height: 60vh;
+
+            @media (min-width:744px){
+                height: 45vh;    
+            }
+
+            @media (min-width:1024px){
+                height: 70vh;
+            }
+        }
+
+        p{
+            display: none;
+
+            @media (min-width:744px){
+                display: block;
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 25px;
+
+            @media (min-width:744px){
+                justify-content: left;
+                gap: 20px;
+            }
+
+            
+
+            &__start{
+                background-color: variaveis.$bg-main-button;
+                height: 34px;
+                width: 132px;
+                font-size: 1.8rem;
+                border-radius: 15px;
+                border: 1px solid transparent;
+            }
+
+            &__discord{
+                background-color: transparent;
+                height: 34px;
+                width: 132px;
+                font-size: 1.8rem;
+                border-radius: 15px;
+                border: 1px solid white;
+            }
+
+        }
+
+        &__text{
+            @media (min-width:1024px){
+                max-width: 660px;
+            }
+        }
+    }
+}
+
+
+.text{
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: variaveis.$secondary-text;
+
+    @media (min-width:1024px){
+        font-size: 2.4rem;
+    }
+}
+
+.title--big{
+    font-size: 3.8rem;
+}
+
+.title--medium{
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+
+    @media (min-width:744px){
+        font-size: 4.2rem;
+    }
+
+    @media (min-width:1024px){
+        font-size: 6rem;
+    }
+}
+
+.title--small{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// input trocar de tema
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.9em;
+    height: 26px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+  }
+  
+  input:checked + .slider {
+    background-color: #522ba7;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+  }
