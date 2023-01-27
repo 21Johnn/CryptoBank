@@ -1,6 +1,8 @@
 @use 'variaveis';
 @use 'numeros';
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Roboto:wght@100;400;700&display=swap');
+@use 'about';
+@use 'products';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Montserrat:wght@100;400&family=Roboto:wght@100;400;700&display=swap');
 
 
 
@@ -189,7 +191,7 @@ button{
 
 .text{
     font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: variaveis.$secondary-text;
 
     @media (min-width:1024px){

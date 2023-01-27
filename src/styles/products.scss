@@ -1,0 +1,102 @@
+@use 'variaveis';
+
+.products{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    gap: 48px;
+
+    @media (min-width:744px){
+        margin-top: 60px;
+    }
+
+    @media (min-width:1024px){
+        margin-top: 70px;
+        gap: 80px;
+    }
+
+    &__title{
+        text-align: center;
+
+        h4{
+            color: variaveis.$blue-text;
+            font-size: 1.8rem;
+
+            @media (min-width:744px){
+                font-size: 2.4rem;
+            }
+        }
+
+        h2{
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+
+            @media (min-width:744px){
+                font-size: 6rem;
+            }
+        }
+    }
+
+    &__itens{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        
+
+
+        @media (min-width:744px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width:1024px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 11px;
+        }
+
+        &__item{
+            width: 293px;
+            height: 265px;
+            background: linear-gradient(129.23deg, #312F3A 0%, #1E1C29 100%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (min-width:744px){
+                width: 315px;
+                height: 285px;
+            }
+
+            @media (min-width:1140px){
+                width: calc((100vw - 190px) / 4);
+                height: 281px;
+            }
+    
+            img{
+                width: 47px;
+                height: 47px;
+                margin-bottom: 20px;
+
+                @media (min-width:744px){
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            h3{
+                font-size: 2.4rem;
+                letter-spacing: 1px;
+            }
+
+            p{
+                font-size: 1.6rem;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+
+}
