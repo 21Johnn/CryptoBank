@@ -1,0 +1,82 @@
+@use 'variaveis';
+
+.accordion{
+    margin-top: 85px;
+    width: 100%;
+
+    &__item{
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        &__header{
+            background-color: variaveis.$bg-main-button;
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+            position: relative;
+
+            @media (min-width:744px){
+                padding: 12px;
+            }
+
+            @media (min-width:1024px){
+                padding: 15px;
+            }
+
+            &::before{
+                content: "+";
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2rem;
+            }
+
+            &.open:before{
+                content: "-";
+            }
+
+            span{
+                font-size: 1.8rem;
+
+                @media (min-width:744px){
+                    font-size: 2rem;
+                }
+
+                @media (min-width:1024px){
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        &__content{
+            padding: 0 15px;
+            height: 0;
+            overflow: hidden;
+            transition: height, padding, 0.5s ease-in;
+            border: 1px solid variaveis.$bg-main-button;
+            border-top: none;
+
+            p{
+                font-size: 1.6rem;
+
+                @media (min-width:744px){
+                    font-size: 1.8rem;
+                }
+
+                @media (min-width:1024px){
+                    font-size: 2rem;
+                }
+            }
+
+            &.open{
+                height: 250px;
+                padding-top: 15px ;
+                padding-bottom: 15px ;
+                transition: height, padding-bottom,padding-top, 0.5s ease;
+            }
+        }
+    }
+}

@@ -2,6 +2,10 @@
 @use 'numeros';
 @use 'about';
 @use 'products';
+@use 'plans';
+@use 'accordion';
+@use 'bitcoin';
+@use 'footer';
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Montserrat:wght@100;400&family=Roboto:wght@100;400;700&display=swap');
 
 
@@ -24,6 +28,13 @@ button{
 
 :root{
     font-size: 62.5%;
+}
+
+.mainCont{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: variaveis.$bg-color;
 }
 
 .container{
@@ -101,11 +112,18 @@ button{
                 }
 
                 @media (min-width:1024px){
-                    height: 41px;
-                    width: 139px;
+                    height: 45px;
+                    width: 153px;
                     font-size: 2.4rem;
                     width: 143px;
                     height: 42px;
+                }
+
+                &:hover{
+                    scale: 1.1;
+                    -webkit-box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
+                    -moz-box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
+                    box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
                 }
             }
         }
@@ -167,6 +185,19 @@ button{
                 font-size: 1.8rem;
                 border-radius: 15px;
                 border: 1px solid transparent;
+
+                &:hover{
+                    scale: 1.1;
+                    -webkit-box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
+                    -moz-box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
+                    box-shadow: 10px 0px 26px -6px rgba(66,37,242,1);
+                }
+
+                @media (min-width:1024px){
+                    height: 41px;
+                    width: 159px;
+                    font-size: 2.4rem;
+                }
             }
 
             &__discord{
@@ -176,6 +207,20 @@ button{
                 font-size: 1.8rem;
                 border-radius: 15px;
                 border: 1px solid white;
+
+                &:hover{
+                    scale: 1.1;
+                    -webkit-box-shadow: 10px 0px 26px -6px rgb(251, 251, 251);
+                    -moz-box-shadow: 10px 0px 26px -6px rgb(255, 255, 255);
+                    box-shadow: 10px 0px 26px -6px rgb(255, 255, 255);
+                }
+
+
+                @media (min-width:1024px){
+                    height: 41px;
+                    width: 159px;
+                    font-size: 2.4rem;
+                }
             }
 
         }
@@ -219,8 +264,6 @@ button{
 .title--small{
     font-size: 1.8rem;
 }
-
-
 
 
 

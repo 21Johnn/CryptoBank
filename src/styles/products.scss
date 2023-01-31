@@ -75,6 +75,11 @@
                 width: calc((100vw - 190px) / 4);
                 height: 281px;
             }
+
+            @media (min-width:1440px){
+                width: calc((1440px - 190px) / 4);
+                height: 281px;
+            }
     
             img{
                 width: 47px;
