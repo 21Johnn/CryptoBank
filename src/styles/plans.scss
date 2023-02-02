@@ -272,3 +272,47 @@
         }
     }
 }
+
+.light .plans{
+
+    h2{
+        color: rgb(33, 33, 33);
+    }
+
+    &__containers{
+
+
+        &__bgblack{
+            background-color: #22b3eb;
+
+            h4{
+                color: white;
+            }
+
+            .price{
+
+                span{
+                    color: white;
+                }
+
+                h2{
+                    color: white;
+                }
+            }
+
+            .spanCont{
+                color: white;
+                border-bottom: 1px solid rgb(33, 33, 33);
+            }
+
+            .itens{
+
+                p{
+                    color: white;
+                }
+            }
+        }
+
+        
+    }
+}

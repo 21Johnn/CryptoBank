@@ -183,3 +183,49 @@
         }
     }
 }
+
+.light .numeros{
+
+    &__main{
+
+        &__header{
+            background-color: #22b3eb;
+            border-bottom: 1px solid rgb(85, 85, 85);
+
+            h3{
+                color: white;
+            }
+
+            span{
+                color: white;
+            }
+        }
+
+        &__divs{
+
+            div{
+                background-color: #22b3eb;
+            }
+
+            .second{
+                border-bottom: 1px solid rgb(85, 85, 85);
+                border-top: 1px solid rgb(85, 85, 85);
+
+                @media (min-width:1024px){
+                    border-left: 1px solid rgb(85, 85, 85);
+                    border-right: 1px solid rgb(85, 85, 85);
+                    border-top: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+                }
+            }
+
+            h3{
+                color: white;
+            }
+
+            p{
+                color: white;
+            }
+        }
+    }
+}

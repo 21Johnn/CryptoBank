@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="dist/images/crypto.png">
+    <meta name="keywords" content="cryptomoedas, binance, bitcoin, banco de criptomoedas, metaverso">
+    <meta name="description" content="Banco 100% voltado para transações de moedas digitais como o bitcoin.">
+    <meta name="author" content="FuturoDevJohn">
 
     <link rel="stylesheet" href="dist/css/main.css">
 
@@ -14,6 +18,30 @@
 <body>  
 
     <div class="mainCont">
+
+        <div class="login" id="login">
+            <h2>Acesse sua conta</h2>
+            <div class="form">
+                <form action="">
+                    <label for="username">Usuário</label>
+                    <input type="text">
+                    <label for="senha">Senha</label>
+                    <input type="password">
+                </form>
+                <button>LOGIN</button>
+            </div>
+            <span class="acesse">Ou acesse usando sua carteira:</span>
+            <div class="wallets">
+                <img src="dist/images/MetaMask_Fox.svg.png" alt="conectar com metamask">
+                <img src="dist/images/vertical_blue.png" alt="conectar com trust wallet">
+                <img src="dist/images/sqzgmbkggvc1uwgapeuy.avif" alt="conectar com phantom">
+            </div>
+            <span class="newUser">Ainda não é cadastrado?<a href="#">Clique Aqui</a></span>
+
+            
+        </div>
+
+        <div class="modal-bg" id="modal"></div>
         <header class="header container">
             <nav class="header__nav">
                 <img src="dist/images/moeda.png" alt="LOGO DA EMPRESA">
@@ -24,12 +52,12 @@
                             <span class="slider"></span>
                         </label>
                     </div>
-                    <button>CONNECT WALLET</button>
+                    <button id="connect">CONNECT WALLET</button>
                 </div>
             </nav>
             <div class="header__content">
-                <img src="dist/images/imgeth.png" alt="">
-                <div class="header__content__text">
+                <img src="dist/images/imgeth.png" alt="" data-aos="fade-left">
+                <div class="header__content__text" data-aos="fade-right">
                     <h2 class="title--medium">
                         Negocie criptomoedas 
                         de forma segura e eficiente
@@ -47,7 +75,7 @@
             </div>
         </header>
     
-        <section class="numeros container">
+        <section class="numeros container" data-aos="flip-up">
             <div class="numeros__main">
                 <div class="numeros__main__header">
                     <div>
@@ -90,16 +118,16 @@
         </section>
     
         <section class="about container">
-            <div class="about__images"></div>
-            <div class="about__content">
+            <div class="about__images" data-aos="zoom-in"></div>
+            <div class="about__content" data-aos="zoom-in">
                 <h4>SOBRE NÓS</h4>
                 <h2>descubra mais sobre a nossa empresa</h2>
                 <p>CryptoBank: Sua escolha de confiança para armazenar e negociar suas criptomoedas, com segurança de primeira linha, tecnologia avançada e suporte profissional</p>
             </div>
-            <div class="about__images2"></div>
+            <div class="about__images2" data-aos="zoom-in"></div>
         </section>
     
-        <section class="products container">
+        <section class="products container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <div class="products__title">
                 <h4>recursos</h4>
                 <h2>descubra o futuro</h2>
@@ -131,7 +159,7 @@
         <section class="plans container">
             <h2>ESCOLHA SEU PLANO</h2>
             <div class="plans__containers">
-                <div class="plans__containers__bgwhite">
+                <div class="plans__containers__bgwhite" data-aos="zoom-in">
                     <h4>Basico</h4>
                     <div class="price">
                         <h2>$ 29</h2>
@@ -153,7 +181,7 @@
                     </div>
                     <button>ASSINAR</button>
                 </div>
-                <div class="plans__containers__bgblack">
+                <div class="plans__containers__bgblack" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
                         <span class="pop">popular</span>
                         <h4>Professional</h4>
                     <div class="price">
@@ -175,7 +203,7 @@
                     </div>
                         <button>ASSINAR</button>                
                 </div>
-                <div class="plans__containers__bgwhite">
+                <div class="plans__containers__bgwhite" data-aos="zoom-in">
                         <h4>Fullstack</h4>
                     <div class="price">
                         <h2 >$ 99</h2>
@@ -279,10 +307,13 @@
 
 
 
-
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- js -->
     <script src="src/scripts/main.js"></script>
-    <!-- aos -->
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    
 </body>
 </html>

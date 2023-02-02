@@ -1,3 +1,6 @@
+// aos
+
+
 // accordion
 const headers = document.querySelectorAll('.accordion__item__header');
 headers.forEach(header => {
@@ -123,6 +126,50 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// change theme
+// login
+
+const loginBtn = document.getElementById('connect');
+const modal = document.getElementById('modal');
+const containerLogin = document.getElementById('login')
+
+loginBtn.addEventListener('click', function(){
+    containerLogin.classList.add('openLogin');
+    modal.style.display = 'block';
+})
+
+modal.addEventListener('click', function(){
+    modal.style.display = 'none';
+    containerLogin.classList.remove('openLogin');
+})
+
+
+// theme 
+const changeThemeBtn = document.querySelector("#change-theme");
+
+function toggleLightMode(){
+    document.body.classList.toggle("light");
+};
+
+function loadTheme(){
+    const lightMode = localStorage.getItem("light")
+
+    if(lightMode){
+        toggleLightMode();
+    }
+}
+
+loadTheme();
+
+changeThemeBtn.addEventListener("change", function(){
+    document.body.classList.toggle("light");
+
+    localStorage.removeItem("light");
+
+    if(document.body.classList.contains("light")){
+        localStorage.setItem("light", 1);
+    }
+
+}
+);
 
 
